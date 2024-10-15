@@ -211,7 +211,7 @@ textarea {
 
 
 .background-contacto {
-    background-image: url('../images/background/images.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+    background-image: url('Images\background\images.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
     background-size: cover; /* Para que la imagen ocupe toda la pantalla */
     background-position: center; /* Centrar la imagen */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
