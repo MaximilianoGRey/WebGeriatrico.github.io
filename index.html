@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Stylos.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--  JS QUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--  JS PROPIOS -->
+    <script type="text/javascript" src="JS/JavaScript.js"></script>
+    <!-- Estilos propios -->
+    <link href="content\styles.css" rel="stylesheet" />
+    <!-- BOXICONS ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="body">
+
+
+    <style>
+        html {
+            overflow-x: hidden;
+            scroll-padding-top: 7rem;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+        }
+    </style>
+
+  
+        
+        <div>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img data-base-name="images/Logo/Logo" alt="Logo" width="40" height="40" class="d-inline-block align-text-top dynamic-image">
+                        La Alternativa</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderDefault" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        
+        </div>
+
+
+        <div class="carousel">
+            <div class="slider">
+                <div class="contenedor">
+                    <img src="Images\img1.jpg" alt="Primer imagen">
+                </div>
+                <div class="contenedor">
+                    <img src="Images\img2.jpg" alt="Segunda imagen">
+                </div>
+                <div class="contenedor">
+                    <img src="Images\img3.jpg" alt="Tercer imagen">
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Bienvenidos</h1>
+                <p><span class="fw-bold text-info">La alternanativa</span> es un establecimiento residencial dedicado a la prestación integral de servicios asistidos para adultos mayores.</p>
+      
+                <p>Buscamos concebir un espacio integrar en un mismo espacio el confort, la calidez y la comodidad del propio hogar con la asistencia personalizada y el cuidado integral de la salud física, emocional y social del adulto mayor, logrando en conjunto con su entorno familiar, la mayor calidad de vida posible en esta etapa de su vida. En definitiva un entorno similar a un Hogar de Familia con servicios de hotel superiores.</p>
+      
+                <p>Para ello, consideramos de suma importancia desarrollar factores que aporten bienestar al residente, como:</p>
+      
+                <p>• Incentivar la interacción con otras personas de su misma generación.</p>
+      
+                <p>• Lograr un equilibrio de estabilidad física, emocional y social a través de un amplio espectro de actividades de esparcimiento y estimulación que apuntan a mejorar su calidad de vida.</p>
+      
+                <p>• Brindar un contexto sano y cálido de atención personalizada y contención.</p>
+            </div>
+        </div>
+      
+        <div class="row t-container">
+            <div class=col></div>
+            <div class="col thumbnail-container d-flex">
+                <img src="Images\thumbnail\img1.jpg" alt="" class="thumbnail active" />
+                <img src="Images\thumbnail\img2.jpg" alt="" class="thumbnail" />
+                <img src="Images\thumbnail\img3.jpg" alt="" class="thumbnail" />
+            </div>
+            <div class="col img-container d-flex justify-content-center">
+                <img src="Images\thumbnail\img1.jpg" alt="img1" class="main-img" />
+            </div>
+            <div class=col></div>
+        </div>
+      
+        <form method="post" action="send_email.php"  >
+        <div class="background-contacto ">
+        <div class="form-container opaco ">
+            <h2>Contacto</h2>
+            <div class="col">
+                <!-- Columna para Nombre, Correo y Teléfono -->
+                <label for="txtNombre">Nombre</label>
+                <input type="text" id="name" name="name" class="form-control" required />
+      
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="form-control" required />
+      
+                <label for="telefone">Teléfono móvil</label>
+                <input type="tel" id="telefone" name="telefone" class="form-control" required />
+            </div>
+      
+            <div class="col">
+                <!-- Columna para el mensaje -->
+                <label for="mensaje">Mensaje</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+        </div>
+        <button class="btn-submit" type="submit" value="Enviar">Enviar</button>
+            </div>
+            
+        </form>
+      
+        
+      
+        <div class="row">
+            <iframe class="frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.921085619568!2d-58.8004649234017!3d-34.35248644427505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61b90c949f8d%3A0x957ce105f51ea2dd!2sJard%C3%ADn%20Japon%C3%A9s%20de%20Escobar!5e0!3m2!1ses-419!2sar!4v1728187789849!5m2!1ses-419!2sar"></iframe>
+        </div>
+      
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      
+        <a href="https://wa.me/541140761033" target="_blank" class="whatsapp-icon">
+            <i class='bx bxl-whatsapp'></i>
+        </a>
+       
+        <footer class="pt-4 pb-4 footer" id="footer" runat="server">
+            <div class="container-fluid text-center text-md-start">
+                <div class="row text-center text-md-start">
+                    <div class="text-center mb-2">
+                        <p>Copyright. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/tobiasmoscatelli/" style="color: #373737" target="_blank">
+                                    <i class='bx bxl-linkedin-square'></i>Tobias en Linkedin
+                                </a>
+                                <i>| </i>
+                                <a href="https://www.linkedin.com/in/daniel-romani-2b0663202/" style="color: #373737" target="_blank">
+                                    <i class='bx bxl-linkedin-square'></i>Daniel en linkedin
+                                </a>
+                                <i>| </i>
+                                <a href="https://www.linkedin.com/in/maximiliano-rey-b97519159/" style="color: #373737" target="_blank">
+                                    <i class='bx bxl-linkedin-square'></i>Maximiliano en linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="mx-auto mt-3">
+                        <h6 class="text-black mb-4 font-weight-black text-primary">Soporte Técnico | <i class='bx bx-mail-send'></i>tobidanimaxi@gmail.com
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+
+    <script src="scrips.js"></script>
+</body>
+</html>
