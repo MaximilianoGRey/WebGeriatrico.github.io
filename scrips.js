@@ -1,34 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const extensions = ['jpg', 'png', 'gif', 'jpeg'];
-    const images = document.querySelectorAll('.dynamic-image');
-
-    images.forEach(image => {
-        const baseName = image.getAttribute('data-base-name');
-        let imageLoaded = false;
-
-        for (let ext of extensions) {
-            let imgSrc = `${baseName}.${ext}`;
-            let img = new Image();
-
-            img.onload = function () {
-                if (!imageLoaded) {
-                    image.src = imgSrc;
-                    imageLoaded = true;
-                }
-            };
-
-            img.onerror = function () {
-                console.log(`No se pudo cargar la imagen con extensión ${ext}`);
-            };
-
-            img.src = imgSrc;
-
-            if (imageLoaded) break;
-        }
-    });
-   
-
-});
 
 
 const main_img = document.querySelector('.main-img');
